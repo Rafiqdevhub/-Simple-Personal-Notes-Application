@@ -1,4 +1,4 @@
-# Personal Notes Management App
+# -Simple-Personal-Notes-Application
 
 A simple web application for managing personal notes, built with the MERN stack (MongoDB, Express, React, Node.js).
 
@@ -9,21 +9,24 @@ A simple web application for managing personal notes, built with the MERN stack 
 - RESTful API for note management
 - Persistent storage with MongoDB
 
-## Demo
+<!-- ## Demo
 
-![App Screenshot](./screenshot.png)
+![App Screenshot](./screenshot.png) -->
 
 ## Tech Stack
 
 **Frontend:**
+
 - React
 - TailwindCSS
 
 **Backend:**
+
 - Node.js
 - Express
 
 **Database:**
+
 - MongoDB
 
 ## Getting Started
@@ -40,5 +43,9 @@ Make sure you have the following installed on your machine:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/personal-notes-management-app.git
-cd personal-notes-management-app
+git clone https://github.com/Rafiqdevhub/-Simple-Personal-Notes-Application.git
+cd -Simple-Personal-Notes-Application
+
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+```

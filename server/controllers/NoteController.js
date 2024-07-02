@@ -1,5 +1,6 @@
 const Notes = require("../models/NotesModels");
 
+// create note
 const createNote = async (req, res) => {
   try {
     const { title, content } = req.body;
@@ -14,6 +15,7 @@ const createNote = async (req, res) => {
   }
 };
 
+// get notes
 const getNotes = async (req, res) => {
   try {
     const notes = await Notes.find();
@@ -24,7 +26,6 @@ const getNotes = async (req, res) => {
 };
 
 // getNote by id
-
 const getNoteById = async (req, res) => {
   try {
     const note = await Notes.findById(req.params.id);
@@ -39,7 +40,6 @@ const getNoteById = async (req, res) => {
 };
 
 // update notes
-
 const updatedNote = async (req, res) => {
   try {
     const { title, content } = req.body;

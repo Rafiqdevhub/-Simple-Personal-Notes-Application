@@ -1,9 +1,7 @@
-import "./App.css";
-
 function App() {
   return (
     <>
-      <h1>React App...</h1>
+      <h1 className="text-5xl font-bold bg-red-100 underline">Hello world!</h1>
     </>
   );
 }

@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.json());
-app.use(express.urlencoded());
+// app.use(express.urlencoded());
 
 app.use("/api", noteRoute);
 

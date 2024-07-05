@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function NoteForm({ addNote, updateNote, note }) {
   const [title, setTitle] = useState(note ? note.title : "");

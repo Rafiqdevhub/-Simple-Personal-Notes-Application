@@ -10,21 +10,24 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/notes")
+      .get("http://localhost:3000/api/getNotes")
       .then((response) => setNotes(response.data))
       .catch((error) => console.error("Error fetching notes:", error));
   }, []);
 
   const addNote = (note) => {
     axios
-      .post("http://localhost:5000/api/notes", note)
+      .post("http://localhost:3000/api/createNote", note)
       .then((response) => setNotes([...notes, response.data]))
       .catch((error) => console.error("Error adding note:", error));
   };
 
   const updateNote = (updatedNote) => {
     axios
-      .put(`http://localhost:5000/api/notes/${updatedNote.id}`, updatedNote)
+      .put(
+        `http://localhost:3000/api/updateNote/${updatedNote.id}`,
+        updatedNote
+      )
       .then((response) =>
         setNotes(
           notes.map((note) =>
@@ -37,14 +40,16 @@ function App() {
 
   const deleteNote = (id) => {
     axios
-      .delete(`http://localhost:5000/api/notes/${id}`)
+      .delete(`http://localhost:3000/api/deleteNote/${id}`)
       .then(() => setNotes(notes.filter((note) => note.id !== id)))
       .catch((error) => console.error("Error deleting note:", error));
   };
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Personal Notes</h1>
+      <h1 className="text-2xl font-bold mb-4">
+        Simple Personal Notes Application
+      </h1>
       <div className="grid grid-cols-3 gap-4">
         <NoteList
           notes={notes}

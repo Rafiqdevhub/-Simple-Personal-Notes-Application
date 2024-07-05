@@ -24,10 +24,7 @@ function App() {
 
   const updateNote = (updatedNote) => {
     axios
-      .put(
-        `http://localhost:3000/api/updateNote/${updatedNote.id}`,
-        updatedNote
-      )
+      .put(`http://localhost:3000/api/updateNote`, updatedNote)
       .then((response) =>
         setNotes(
           notes.map((note) =>
